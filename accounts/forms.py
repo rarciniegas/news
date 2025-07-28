@@ -1,12 +1,22 @@
+# accounts/forms.py
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from .models import CustomUser
 
 class CustomUserCreationForm(UserCreationForm):
     class Meta(UserCreationForm.Meta):
         model = CustomUser
-        fields = UserCreationForm.Meta.fields +  ("age",) # Specify the fields you want to include
+        fields = (
+            'username',
+            'email',
+            'age'        # Add other fields you want to include in the signup form
+        
+        )
 
 class CustomUserChangeForm(UserChangeForm):
     class Meta:
         model = CustomUser
-        fields = UserChangeForm.Meta.fields # Specify the fields you want to include
+        fields = (
+            'username',
+            'email',
+            'age',  # Add other fields you want to include in the user change form
+        )

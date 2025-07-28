@@ -1,3 +1,4 @@
+# django_project/settings.py
 """
 Django settings for django_project project.
 
@@ -55,7 +56,7 @@ ROOT_URLCONF = "django_project.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [BASE_DIR / "templates"],  # Directory for custom templates
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -123,3 +124,5 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 AUTH_USER_MODEL = "accounts.CustomUser"  # Custom user model
+LOGIN_REDIRECT_URL = "home"  # Redirect URL after login
+LOGOUT_REDIRECT_URL = "home"  # Redirect URL after logout

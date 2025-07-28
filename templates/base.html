@@ -1,0 +1,16 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Newspaper App{% endblock %}</title>
+    </head>
+
+    <body>
+        <main>
+            {% block content %}
+            <!-- Content will be injected here -->
+            {% endblock %}
+        </main>
+    </body>
+</html>
