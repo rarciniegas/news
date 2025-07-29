@@ -38,7 +38,12 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    # 3rd party apps
+    "crispy_forms",  # For better form rendering
+    "crispy_bootstrap5",  # For Bootstrap 5 support in crispy forms
+    # Custom apps
     "accounts",  # Custom app for user accounts
+    "pages",  # Custom app for static pages
 ]
 
 MIDDLEWARE = [
@@ -126,3 +131,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 AUTH_USER_MODEL = "accounts.CustomUser"  # Custom user model
 LOGIN_REDIRECT_URL = "home"  # Redirect URL after login
 LOGOUT_REDIRECT_URL = "home"  # Redirect URL after logout
+# Crispy Forms settings
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5" 
