@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     # Custom apps
     "accounts",  # Custom app for user accounts
     "pages",  # Custom app for static pages
+    "articles",  # Custom app for articles
 ]
 
 MIDDLEWARE = [
@@ -112,7 +113,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "en-us"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "America/New_York"
 
 USE_I18N = True
 
